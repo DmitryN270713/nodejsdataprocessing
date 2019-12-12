@@ -1,0 +1,90 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "This is a simple weather microservice that will be used to gather information for following up analysis.",
+    "version": "0.0.1",
+    "title": "QA microservice",
+    "termsOfService": "Deployed under MIT license",
+    "contact": {
+      "email": "willbe@skipped.com"
+    },
+    "license": {
+      "name": "MIT",
+      "url": "https://en.wikipedia.org/wiki/MIT_License"
+    }
+  },
+  "host": "localhost:3000",
+  "basePath": "/",
+  "tags": [
+    {
+      "name": "about",
+      "description": "Information about this microservice"
+    }
+  ],
+  "schemes": [
+    "https",
+    "http"
+  ],
+  "paths": {
+    "/data/addquestionanswer": {
+      "post": {
+        "tags": [
+          "qa pairs"
+        ],
+        "summary": "Add a new QA pair",
+        "description": "Add a new QA pair records",
+        "operationId": "addquestionanswer",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "QA pair",
+            "description": "Question and answer to add to DB",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/QA_Pair"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Information either was added or skipped, see returned json file"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "QA_Pair": {
+      "type": "object",
+      "required": [
+        "intent",
+        "question",
+        "answer"
+      ],
+      "properties": {
+        "intent": {
+          "type": "string",
+          "example": "find_location"
+        },
+        "question": {
+          "type": "string",
+          "example": "How are you doing?"
+        },
+        "answer": {
+          "type": "string",
+          "example": "I am fine. How are you?"
+        }
+      }
+    }
+  },
+  "externalDocs": {
+    "description": "Find out more about Swagger",
+    "url": "http://swagger.io"
+  }
+}
