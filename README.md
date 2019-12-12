@@ -3,10 +3,6 @@
 This service is open for use and modification under MIT license
 Code provided "as it is".
 
-## Build status  
-
-[![Build Status](https://travis-ci.org/DmitryN270713/nodejsdataprocessing.svg?branch=master)](https://travis-ci.org/DmitryN270713/nodejsdataprocessing)
-
 ## Microservice documentation  
 
 Documentation can be found [here](https://htmlpreview.github.io/?https://github.com/DmitryN270713/nodejsdataprocessing/blob/master/docs/index.html)  
