@@ -38,7 +38,7 @@ const databaseSettings = {
 const serverSettings = {
     port: 3000,
     ssl: ()=> ({        
-        useSsl: true,
+        useSsl: false,
         validDays: 1
     })
 }
